@@ -4,6 +4,7 @@ import Navbar from "./components/common/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/common/Footer";
+import AllGames from "./pages/AllGames";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/all-games" element={<AllGames />} />
         </Routes>
       </div>
       <Footer />
