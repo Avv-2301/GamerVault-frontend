@@ -22,8 +22,8 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="bg-indigo-950 text-white px-8 py-10 h-96 flex flex-col justify-center">
-      <h3 className="text-3xl font-bold mb-8 text-center">What Gamers Say</h3>
+    <section className="bg-indigo-950 text-white px-8 py-16 flex flex-col justify-center">
+      <h3 className="text-4xl font-bold mb-8 text-center">What Gamers Say</h3>
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         {testimonials.map((t, i) => (
           <div
@@ -32,19 +32,20 @@ const Testimonials = () => {
           >
             <div className="flex items-center space-x-4 mb-4 h-18">
               <div className="bg-gray-600 h-10 w-10 rounded-full flex items-center justify-center text-white">
-                {t.name
-                  .split(" ")
-                  .map((word) => word[0])
-                  .join("")}
+                <img
+                  src="https://github.com/shadcn.png"
+                  alt="Profile"
+                  className="rounded-full h-10 w-10"
+                />
               </div>
               <div>
-                <p className="font-semibold">{t.name}</p>
+                <p className="font-semibold text-lg">{t.name}</p>
                 <p className="text-yellow-400 text-lg">
                   {"★".repeat(t.rating)}
                 </p>
               </div>
             </div>
-            <p className="text-md text-white-300">{`"${t.feedback}"`}</p>
+            <p className="text-lg text-white-300">{`"${t.feedback}"`}</p>
           </div>
         ))}
       </div>

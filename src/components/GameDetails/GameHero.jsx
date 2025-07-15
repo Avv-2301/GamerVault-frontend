@@ -13,24 +13,24 @@ const GameHero = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
         <h1 className="text-4xl font-bold mb-2">Cyber Nexus 2077</h1>
-        <p className="mb-2 text-gray-300">
+        <p className="mb-2 text-gray-400 font-semibold">
           Experience the ultimate cyberpunk adventure in a world where
           technology and humanity collide.
         </p>
-        <p className="text-sm text-gray-400">
+        <p className="text-md font-semibold text-gray-400">
           Developer: <span className="text-white">NeonStorm Studios</span>{" "}
           &nbsp;|&nbsp; Release:{" "}
           <span className="text-white">March 15, 2024</span> &nbsp;|&nbsp;
           Rating: ⭐ 4.8/5
         </p>
         <div className="mt-4 flex gap-3 flex-wrap">
-          <button className="bg-indigo-600 px-4 py-2 rounded text-white cursor-pointer">
+          <button className="bg-indigo-600 px-4 py-2 rounded text-white cursor-pointer font-semibold text-lg ">
             Add To Cart
           </button>
-          <button className="bg-green-600 px-4 py-2 rounded text-white cursor-pointer">
+          <button className="bg-green-600 px-4 py-2 rounded text-white cursor-pointer text-lg font-semibold">
             Buy Now - $59.99
           </button>
-          <button className="bg-gray-800 px-4 py-2 rounded text-white cursor-pointer">
+          <button className="bg-gray-800 px-4 py-2 rounded text-white cursor-pointer text-lg font-semibold">
             ♡ Wishlist
           </button>
         </div>

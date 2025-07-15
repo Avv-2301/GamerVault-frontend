@@ -25,29 +25,29 @@ const GamingNews = () => {
     },
   ];
   return (
-    <section className="bg-[#0d1117] text-white px-8 py-10">
-      <h3 className="text-2xl font-bold mb-6">
+    <section className="bg-[#0d1117] text-white px-8 py-14">
+      <h3 className="text-4xl font-bold mb-8">
         Latest <span className="text-white">Gaming News</span>
       </h3>
       <div className="grid md:grid-cols-3 gap-6">
         {newsItems.map((item, index) => (
           <div
             key={index}
-            className="bg-[#161b22] rounded-lg shadow hover:shadow-lg"
+            className="bg-[#161b22] rounded-lg shadow hover:shadow-lg p-4"
           >
             <img
               src={item.image}
               alt={item.title}
               className="rounded-md h-56 w-full object-cover mb-4"
             />
-            <span className="text-sm text-indigo-400 font-semibold">
+            <span className="text-md text-indigo-400 font-semibold">
               {item.tag}
             </span>
-            <h4 className="text-lg font-bold mt-2">{item.title}</h4>
-            <p className="text-sm text-gray-400 mt-1">{item.description}</p>
+            <h4 className="text-xl font-bold mt-2">{item.title}</h4>
+            <p className="text-md text-gray-400 mt-2">{item.description}</p>
             <a
               href="#"
-              className="text-indigo-400 text-sm mt-2 inline-block hover:underline"
+              className="text-indigo-400 text-md mt-2 inline-block hover:underline hover:text-indigo-300"
             >
               Read More
             </a>

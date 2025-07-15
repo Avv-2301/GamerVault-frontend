@@ -20,7 +20,7 @@ const GameMedia = () => {
   return (
     <>
       <div>
-        <h3 className="text-2xl font-bold mb-4 text-white">Gameplay Trailer</h3>
+        <h3 className="text-2xl font-bold mb-6 text-white text-4xl">Gameplay Trailer</h3>
         <div className="rounded-lg overflow-hidden mb-6">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"

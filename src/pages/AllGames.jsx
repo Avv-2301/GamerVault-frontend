@@ -1,5 +1,6 @@
 import React from "react";
 import GameCard from "../components/AllGames/GameCard";
+import { Loader } from "lucide-react";
 
 const AllGames = () => {
   const gamesData = [
@@ -102,21 +103,21 @@ const AllGames = () => {
 
       {/* Filters */}
       <div className="flex items-center justify-center gap-4 mb-8 bg-gray-900 p-4 rounded-md w-3/4 mx-auto">
-        <h4 className="mt-2 mb-2 text-sm text-gray-400">Genre: </h4>
-        <select className="bg-[#1c1c2b] px-6 py-2 rounded-md text-white">
+        <h4 className="mt-2 mb-2 text-sm text-gray-400 font-semibold">Genre: </h4>
+        <select className="bg-[#1c1c2b] px-4 py-2 rounded-md text-white outline-none">
           <option>All Genres</option>
         </select>
-        <h4 className="mt-2 mb-2 text-sm text-gray-400">Price: </h4>
-        <select className="bg-[#1c1c2b] px-4 py-2 rounded-md text-white">
+        <h4 className="mt-2 mb-2 text-sm text-gray-400 font-semibold">Price: </h4>
+        <select className="bg-[#1c1c2b] px-4 py-2 rounded-md text-white outline-none">
           <option>All Prices</option>
           <option>Free</option>
         </select>
-        <h4 className="mt-2 mb-2 text-sm text-gray-400">Platform: </h4>
-        <select className="bg-[#1c1c2b] px-4 py-2 rounded-md text-white">
+        <h4 className="mt-2 mb-2 text-sm text-gray-400 font-semibold">Platform: </h4>
+        <select className="bg-[#1c1c2b] px-4 py-2 rounded-md text-white outline-none">
           <option>All Platforms</option>
         </select>
         <div className="flex items-center gap-2 ml-auto">
-          <h4 className="text-sm text-gray-400">Sort By:</h4>
+          <h4 className="text-sm text-gray-400 font-semibold">Sort By:</h4>
           <select className="bg-[#1c1c2b] px-4 py-2 rounded-md text-white">
             <option>Popularity</option>
             <option>Newest</option>
@@ -137,9 +138,9 @@ const AllGames = () => {
       </div>
 
       {/* Load More */}
-      <div className="text-center mt-10">
-        <button className="bg-[#2c2c3e] hover:bg-[#3b3b53] text-white px-6 py-3 rounded-md">
-          Load More Games
+      <div className="text-center mt-10 flex justify-center">
+        <button className="bg-[#2c2c3e] hover:bg-[#3b3b53] text-white font-semibold px-6 py-3 rounded-lg flex items-center justify-center gap-2">
+          <Loader size={20} /> Load More Games
         </button>
       </div>
     </div>

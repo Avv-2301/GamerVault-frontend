@@ -1,7 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const slides = [
   {
@@ -27,26 +29,30 @@ const slides = [
 
 const Hero = () => {
   return (
-    <section className="relative h-[600px]">
+    <section className="relative h-[550px]">
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
+        navigation
         loop={true}
+        pagination={{ clickable: true }}
         className="h-full"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
               className="h-full bg-cover bg-center relative"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
             >
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-10 text-white">
+              <div className="absolute inset-0 bg-opacity-50 flex flex-col justify-center items-start px-10 text-white ml-6">
                 <h2 className="text-4xl font-bold mb-4">{slide.title}</h2>
                 <p className="text-lg mb-6">{slide.description}</p>
                 <div className="space-x-4">
-                  <button className="bg-[#2a94f7] px-4 py-2 rounded hover:bg-indigo-700 cursor-pointer">
-                    Play Now
-                  </button>
                   <button className="bg-gray-100 text-black px-4 py-2 rounded hover:bg-white cursor-pointer">
                     Learn More
                   </button>

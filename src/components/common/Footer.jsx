@@ -1,25 +1,27 @@
 import React from "react";
+import { Youtube, Facebook, Twitter, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-[#0d1117] text-white px-8 py-10 border-t border-gray-700">
       <div className="grid md:grid-cols-4 gap-8">
         <div>
-          <h4 className="font-bold text-blue-400 text-xl mb-2">GameVault</h4>
-          <p className="text-gray-400 text-sm">
+          <h4 className="font-bold text-yellow-500 text-3xl mb-2">
+            Gamer's Vault
+          </h4>
+          <p className="text-gray-400 text-md">
             Your ultimate destination for gaming excellence.
           </p>
-          <div className="flex space-x-3 mt-4 text-gray-400 text-lg">
-            <a href="#">🎮</a>
-            <a href="#">🐦</a>
-            <a href="#">📺</a>
-            <a href="#">📷</a>
+          <div className="flex space-x-6 mt-4 text-gray-400 text-lg">
+            <Youtube size={24} color="#f80d0d" />
+            <Facebook size={24} color="#340df8" />
+            <Twitter size={24} color="#0dbdf8" />
           </div>
         </div>
 
         <div>
-          <h5 className="font-semibold mb-2">Games</h5>
-          <ul className="text-sm text-gray-400 space-y-1">
+          <h5 className="font-semibold mb-2 text-lg">Games</h5>
+          <ul className="text-md text-gray-400 space-y-1">
             <li>
               <a href="#" className="hover:underline">
                 New Releases
@@ -44,8 +46,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h5 className="font-semibold mb-2">Support</h5>
-          <ul className="text-sm text-gray-400 space-y-1">
+          <h5 className="font-semibold mb-2 text-lg">Support</h5>
+          <ul className="text-md text-gray-400 space-y-1">
             <li>
               <a href="#" className="hover:underline">
                 Help Center
@@ -70,28 +72,29 @@ const Footer = () => {
         </div>
 
         <div>
-          <h5 className="font-semibold mb-2">Newsletter</h5>
-          <p className="text-sm text-gray-400 mb-2">
+          <h5 className="font-semibold mb-2 text-lg">Newsletter</h5>
+          <p className="text-md text-gray-400 mb-4">
             Stay updated with the latest games and deals
           </p>
-          <form className="flex">
+          <form className="flex gap-4">
             <input
               type="email"
               placeholder="Your email"
-              className="bg-gray-800 px-3 py-2 text-sm text-white rounded-l w-full outline-none"
+              className="bg-gray-800 px-3 py-2 text-md text-white rounded-lg w-full outline-none"
             />
             <button
               type="submit"
-              className="bg-indigo-600 px-4 rounded-r hover:bg-indigo-700"
+              className="bg-indigo-600 px-4 rounded-lg hover:bg-indigo-700 flex items-center justify-center gap-2 text-white font-semibold"
             >
               Subscribe
+              <Mail size={18} color="#ffffff" />
             </button>
           </form>
         </div>
       </div>
 
-      <div className="text-center text-gray-500 text-sm mt-10">
-        © 2024 GameVault. All rights reserved.
+      <div className="text-center text-gray-500 text-sm mt-14">
+        © 2025 Gamer's Vault. All rights reserved.
       </div>
     </footer>
   );
