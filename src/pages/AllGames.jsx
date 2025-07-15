@@ -4,6 +4,7 @@ import GameCard from "../components/AllGames/GameCard";
 const AllGames = () => {
   const gamesData = [
     {
+      id: 1,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/5e7ce7a9b3-54bb67d6d36db9172eec.png",
       title: "Cyber Nexus",
@@ -14,6 +15,7 @@ const AllGames = () => {
       isNew: true,
     },
     {
+      id: 2,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/fafdaf68e7-ebb5bb8f2e7aaf856938.png",
       title: "Dragon’s Quest",
@@ -25,6 +27,7 @@ const AllGames = () => {
       discount: "-50%",
     },
     {
+      id: 3,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/ca7b4fabb0-68dd6658c9be3c98481f.png",
       title: "Stellar Odyssey",
@@ -34,6 +37,7 @@ const AllGames = () => {
       isFree: true,
     },
     {
+      id: 4,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/aa080a80ce-643c83053c1bb07679c0.png",
       title: "Speed Legends",
@@ -43,6 +47,7 @@ const AllGames = () => {
       price: 29.99,
     },
     {
+      id: 5,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/43b050755b-429ffffae487d99b14ff.png",
       title: "Dark Shadows",
@@ -53,6 +58,7 @@ const AllGames = () => {
       is18Plus: true,
     },
     {
+      id: 6,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/1205996c17-ac06273c373f4348b493.png",
       title: "Mind Maze",
@@ -62,6 +68,7 @@ const AllGames = () => {
       price: 14.99,
     },
     {
+      id: 7,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/16658825d2-b51ed5a1b68424471e8b.png",
       title: "Battle Zone",
@@ -72,6 +79,7 @@ const AllGames = () => {
       isBeta: true,
     },
     {
+      id: 8,
       image:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/9e5314fd73-ae4cfcfe0cbfc8887cd5.png",
       title: "Pixel Journey",

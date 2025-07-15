@@ -1,22 +1,35 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import "./App.css";
-import Navbar from "./components/common/Navbar";
+const Navbar = lazy(() => import("./components/common/Navbar"));
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Footer from "./components/common/Footer";
-import AllGames from "./pages/AllGames";
-
+import Loading from "./components/common/Loading";
+const Home = lazy(() => import("./pages/Home"));
+const Footer = lazy(() => import("./components/common/Footer"));
+const AllGames = lazy(() => import("./pages/AllGames"));
+const GameDetails = lazy(() => import("./pages/GameDetails"));
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <Suspense fallback={<Loading />}>
+        <Navbar />
+      </Suspense>
+
       <div className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/all-games" element={<AllGames />} />
-        </Routes>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/store" element={<AllGames />} />
+            <Route path="/game/:id" element={<GameDetails />} />
+            <Route
+              path="/cart/add/:id"
+              element={<div>Cart Page (to be implemented)</div>}
+            />
+          </Routes>
+        </Suspense>
       </div>
-      <Footer />
+      <Suspense fallback={<Loading />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

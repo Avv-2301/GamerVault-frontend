@@ -13,7 +13,7 @@ const slides = [
   },
   {
     image:
-      "https://storage.googleapis.com/uxpilot-auth.appspot.com/f32ad3fe1d-0f93714a4a49d84a6123.png",
+      "https://storage.googleapis.com/uxpilot-auth.appspot.com/9e5314fd73-ae4cfcfe0cbfc8887cd5.png",
     title: "Neon City Awaits",
     description: "Dive deep into the tech-noir streets of the future",
   },
@@ -44,10 +44,10 @@ const Hero = () => {
                 <h2 className="text-4xl font-bold mb-4">{slide.title}</h2>
                 <p className="text-lg mb-6">{slide.description}</p>
                 <div className="space-x-4">
-                  <button className="bg-[#2a94f7] px-4 py-2 rounded hover:bg-indigo-700">
+                  <button className="bg-[#2a94f7] px-4 py-2 rounded hover:bg-indigo-700 cursor-pointer">
                     Play Now
                   </button>
-                  <button className="bg-gray-100 text-black px-4 py-2 rounded hover:bg-white">
+                  <button className="bg-gray-100 text-black px-4 py-2 rounded hover:bg-white cursor-pointer">
                     Learn More
                   </button>
                 </div>

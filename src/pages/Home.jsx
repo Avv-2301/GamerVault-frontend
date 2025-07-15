@@ -1,18 +1,20 @@
-import React from "react";
-import Hero from "../components/Home/Hero";
-import SaleBanner from "../components/Home/SaleBanner";
-import FeaturedGames from "../components/Home/FeaturedGames";
-import GamingNews from "../components/Home/GamingNews";
-import Testimonials from "../components/Home/Testimonials";
+import React, { lazy, Suspense } from "react";
+const Hero = lazy(() => import("../components/Home/Hero"));
+const SaleBanner = lazy(() => import("../components/Home/SaleBanner"));
+const FeaturedGames = lazy(() => import("../components/Home/FeaturedGames"));
+const GamingNews = lazy(() => import("../components/Home/GamingNews"));
+const Testimonials = lazy(() => import("../components/Home/Testimonials"));
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <SaleBanner />
-      <FeaturedGames />
-      <GamingNews />
-      <Testimonials />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Hero />
+        <SaleBanner />
+        <FeaturedGames />
+        <GamingNews />
+        <Testimonials />
+      </Suspense>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GameCard = ({ game }) => {
   const {
@@ -65,9 +66,11 @@ const GameCard = ({ game }) => {
           <button className="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded text-sm">
             Add to Library
           </button>
-          <button className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-sm">
+          <Link to={`/game/${game.id}`} className="ml-auto">
+            <button className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-sm">
             View Details
           </button>
+          </Link>
         </div>
       </div>
     </div>

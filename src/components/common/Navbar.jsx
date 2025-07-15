@@ -1,23 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
   return (
-    <header className="bg-[#0d1117] text-white px-8 py-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold text-blue-400">Gamer Vault</h1>
-      <nav className="space-x-6">
-        <Link to="/" className="text-yello-400">
-          Home
-        </Link>
-        <Link to="/all-games">All Games</Link>
-        <a href="/">Library</a>
-        <a href="/">Profile</a>
-        <a href="/">Shop</a>
+    <header className="bg-[#0d1117] text-white px-8 py-6 flex justify-between items-center">
+      {/* Logo */}
+      <Link to="/" className="text-2xl font-bold text-yellow-400">
+        Gamer's Vault
+      </Link>
+
+      {/* Navigation */}
+      <nav className="space-x-6 font-semibold text-xl">
+        <Link to="/store">Store</Link>
+        <a href="/">Community</a>
+        <a href="/">About</a>
+        <a href="/">Support</a>
       </nav>
-      <div className="space-x-3">
-        <span>🔍</span>
-        <span>🛒</span>
-        <span>👤</span>
+
+      {/* Search + Icons */}
+      <div className="flex items-center gap-4 relative">
+        <input
+          type="text"
+          placeholder="Search games..."
+          className="px-6 py-2 rounded-xl bg-[#1f1f2e] text-sm text-white placeholder-gray-400 focus:outline-none"
+        />
+
+        <span className="text-xl cursor-pointer">🛒</span>
+
+        <div className="relative">
+          <span className="text-xl cursor-pointer" onClick={toggleDropdown}>
+            <img
+              src="https://github.com/shadcn.png"
+              alt="Profile"
+              className="rounded-full h-10 w-10 cursor-pointer"
+            />
+          </span>
+
+          {isDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-40 bg-[#1f1f2e] rounded-md shadow-lg py-2 z-50">
+              <Link
+                to="/profile"
+                className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+              >
+                Profile
+              </Link>
+              <Link
+                to="/library"
+                className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+              >
+                My Library
+              </Link>
+              <button
+                onClick={() => alert("Logged out")} // replace with logout logic
+                className="w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-700"
+              >
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
