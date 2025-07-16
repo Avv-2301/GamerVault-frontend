@@ -9,16 +9,20 @@ const genres = [
 
 const FavoriteGenres = () => {
   return (
-    <div className="bg-gradient-to-r from-[#1a2a3c] to-[#274060] p-6 rounded-xl shadow-lg text-white">
-      <h2 className="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">
+    <div className="bg-gradient-to-r from-sky-950 via-violet-950 to-green-950 p-6 rounded-xl shadow-lg text-white">
+      <h2 className="text-3xl text-blue-400 font-bold mb-4 pb-2">
         Favorite Genres
       </h2>
       <div className="space-y-4">
         {genres.map((genre, index) => (
           <div key={index}>
-            <p className="text-sm font-medium mb-1">{genre.name}</p>
+            <p className="text-lg font-semibold mb-1 text-gray-300">
+              {genre.name}
+            </p>
             <div className="w-full h-3 bg-gray-700 rounded-full">
-              <div className={`h-3 rounded-full ${genre.color} ${genre.width}`}></div>
+              <div
+                className={`h-3 rounded-full ${genre.color} ${genre.width}`}
+              ></div>
             </div>
           </div>
         ))}
