@@ -5,7 +5,7 @@ const ReviewForm = () => {
   const [username, setUsername] = useState("");
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
-  const [submitted, setSubmitted] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
