@@ -35,7 +35,7 @@ const Hero = () => {
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         navigation
         loop={true}
-        pagination={{ clickable: true }}
+        pagination={{ dynamicBullets: true, clickable: true }}
         className="h-full"
       >
         {slides.map((slide, index) => (
@@ -44,16 +44,13 @@ const Hero = () => {
               className="h-full bg-cover bg-center relative"
               style={{
                 backgroundImage: `url(${slide.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
               }}
             >
               <div className="absolute inset-0 bg-opacity-50 flex flex-col justify-center items-start px-10 text-white ml-6">
                 <h2 className="text-4xl font-bold mb-4">{slide.title}</h2>
-                <p className="text-lg mb-6">{slide.description}</p>
+                <p className="text-md mb-6 font-semibold">{slide.description}</p>
                 <div className="space-x-4">
-                  <button className="bg-gray-100 text-black px-4 py-2 rounded hover:bg-white cursor-pointer">
+                  <button className="bg-gray-100 text-black px-4 py-2 rounded hover:bg-white cursor-pointer font-semibold">
                     Learn More
                   </button>
                 </div>
