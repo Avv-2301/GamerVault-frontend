@@ -9,7 +9,7 @@ const ReviewForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ username, rating, comment }); // You can send to API here
+    console.log({ username, rating, comment });
     setSubmitted(true);
     setUsername("");
     setRating(5);
