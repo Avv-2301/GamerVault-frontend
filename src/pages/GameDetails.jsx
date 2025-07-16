@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import Loading from "../components/common/Loading";
+const ReviewForm = lazy(() => import("../components/GameDetails/ReviewForm"));
 const GameHero = lazy(() => import("../components/GameDetails/GameHero"));
 const GameTags = lazy(() => import("../components/GameDetails/GameTags"));
 const GameMedia = lazy(() => import("../components/GameDetails/GameMedia"));
@@ -27,6 +28,7 @@ const GameDetails = () => {
           <div className="flex-1 space-y-10">
             <GameMedia />
             <AboutGame />
+            <ReviewForm/>
             <PlayerReviews />
           </div>
         </Suspense>

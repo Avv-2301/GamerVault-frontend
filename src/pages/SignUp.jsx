@@ -11,6 +11,7 @@ import {
   FaShieldAlt,
   FaCalendar,
 } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(true);
@@ -19,7 +20,7 @@ const SignUp = () => {
       <div className="w-full max-w-md p-8 rounded-xl border border-gradient-to-r from-slate-950 to-gray-950 shadow-lg bg-gradient-to-b from-[#fc0324] to-[#2403fc] relative mb-10 mt-10">
         <div className="flex justify-center mb-4">
           <div className="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-blue-500 flex items-center justify-center">
-            <IoGameController size={22} className="text-gray-800 animate-bounce" />
+            <IoGameController size={24} className="text-gray-800 animate-bounce" />
           </div>
         </div>
 
@@ -106,7 +107,7 @@ const SignUp = () => {
                 Terms of Service
               </a>{" "}
               and{" "}
-              <a href="#" className="text-pink-400">
+              <a href="#" className="text-yellow-400">
                 Privacy Policy
               </a>
             </span>
@@ -121,9 +122,9 @@ const SignUp = () => {
 
         <p className="text-center text-lg font-semibold text-gray-500 mt-4">
           Already have an account?{" "}
-          <a href="/login" className="text-blue-400">
+          <Link to={"/login"} className="text-blue-400">
             Log in here
-          </a>
+          </Link>
         </p>
 
         <div className="flex items-center justify-center gap-4 mt-6">
