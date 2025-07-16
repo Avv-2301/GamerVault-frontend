@@ -11,6 +11,7 @@ const Footer = lazy(() => import("./components/common/Footer"));
 const AllGames = lazy(() => import("./pages/AllGames"));
 const GameDetails = lazy(() => import("./pages/GameDetails"));
 const Cart = lazy(() => import("./pages/Cart"));
+const Profile = lazy(() => import("./pages/UserProfile.jsx"));
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             />
             <Route path="/age-verify" element={<AgeVerification />}></Route>
             <Route path="/cart" element={<Cart />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Suspense>
       </div>
