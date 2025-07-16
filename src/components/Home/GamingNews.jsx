@@ -25,7 +25,7 @@ const GamingNews = () => {
     },
   ];
   return (
-    <section className="bg-[#0d1117] text-white px-8 py-14">
+    <section className="bg-[#0d1117] text-white px-8 py-14 cursor-pointer">
       <h3 className="text-4xl font-bold mb-8">
         Latest <span className="text-white">Gaming News</span>
       </h3>
