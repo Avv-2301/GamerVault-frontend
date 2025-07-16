@@ -5,8 +5,8 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-  const token = false;
-  const user = false;
+  const token = true;
+  const user = true;
 
   return (
     <header className="bg-[#0d1117] text-white px-8 py-6 flex justify-between items-center">
@@ -64,22 +64,22 @@ const Navbar = () => {
         )}
 
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-2 w-40 bg-[#1f1f2e] rounded-md shadow-lg py-2 z-50">
+          <div className="absolute right-0 top-10 mt-2 w-40 bg-[#1f1f2e] rounded-md shadow-lg py-2 z-50">
             <Link
               to="/profile"
-              className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+              className="block px-4 py-2 text-md font-semibold text-white hover:bg-gray-700"
             >
               Profile
             </Link>
             <Link
               to="/library"
-              className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+              className="block px-4 py-2 text-md font-semibold text-white hover:bg-gray-700"
             >
               My Library
             </Link>
             <button
-              onClick={() => alert("Logged out")} // replace with logout logic
-              className="w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-700"
+              onClick={() => alert("Logged out")}
+              className="w-full text-left px-4 py-2 text-md font-semibold text-white hover:bg-gray-700"
             >
               Logout
             </button>
