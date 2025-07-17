@@ -1,6 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const GameHero = () => {
+  const { id } = useParams();
+  console.log(id, "GAMEID")
   return (
     <div
       className="relative h-[600px] bg-cover bg-center rounded-xl overflow-hidden"
@@ -27,9 +31,11 @@ const GameHero = () => {
           <button className="bg-indigo-600 px-4 py-2 rounded text-white cursor-pointer font-semibold text-lg ">
             Add To Cart
           </button>
-          <button className="bg-green-600 px-4 py-2 rounded text-white cursor-pointer text-lg font-semibold">
+          <Link to={`/checkout/${id}`}>
+            <button className="bg-green-600 px-4 py-2 rounded text-white cursor-pointer text-lg font-semibold">
             Buy Now - $59.99
           </button>
+          </Link>
           <button className="bg-gray-800 px-4 py-2 rounded text-white cursor-pointer text-lg font-semibold">
             ♡ Wishlist
           </button>

@@ -6,6 +6,7 @@ import Loading from "./components/common/Loading";
 import AgeVerification from "./components/common/AgeVerification.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
+import CheckoutPage from "./pages/Checkout.jsx";
 const Home = lazy(() => import("./pages/Home"));
 const Footer = lazy(() => import("./components/common/Footer"));
 const AllGames = lazy(() => import("./pages/AllGames"));
@@ -38,6 +39,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/library" element={<Library />} />
+            <Route path="/checkout/:id" element={<CheckoutPage />} />
           </Routes>
         </Suspense>
       </div>
