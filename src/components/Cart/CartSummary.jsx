@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCreditCard, FaShieldAlt  } from "react-icons/fa";
+import { FaCreditCard, FaShieldAlt } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 
 const CartSummary = ({ subtotal }) => {
@@ -34,22 +34,21 @@ const CartSummary = ({ subtotal }) => {
         </button>
       </Link>
 
-      <Link to="/checkout">
+      <Link to="/store">
         <button className="w-full bg-gray-600 text-white py-4 rounded-md font-bold hover:bg-gray-500 transition cursor-pointer flex items-center justify-center gap-2">
           <IoMdArrowBack size={24} /> Continue Shopping
         </button>
       </Link>
 
       <div className="text-sm text-gray-400 mt-8 w-full flex flex-col border-t border-gray-700 pt-4 rounded-md bg-gray-700 p-4 space-y-1">
-  <p className="text-white text-md font-semibold flex items-center gap-2">
-    <FaShieldAlt className="text-green-400"/>
-    Secure Checkout
-  </p>
-  <span className="text-gray-400 text-md">
-    Your payment information is encrypted and secure
-  </span>
-</div>
-
+        <p className="text-white text-md font-semibold flex items-center gap-2">
+          <FaShieldAlt className="text-green-400" />
+          Secure Checkout
+        </p>
+        <span className="text-gray-400 text-md">
+          Your payment information is encrypted and secure
+        </span>
+      </div>
     </div>
   );
 };
