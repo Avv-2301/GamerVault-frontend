@@ -17,7 +17,7 @@ const Navbar = () => {
 
       <nav className="space-x-6 font-semibold text-xl">
         <Link to="/store">Store</Link>
-        <a href="/">Community</a>
+        <Link to="/community">Community</Link>
         <a href="/">About</a>
         <a href="/">Support</a>
       </nav>
