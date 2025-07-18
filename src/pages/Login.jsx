@@ -96,7 +96,7 @@ const Login = () => {
           </div>
         </div>
 
-        <p className="text-center text-md font-semibold text-gray-400 mt-6">
+        <p className="text-center text-lg font-semibold text-gray-400 mt-6">
           New to Gamer Vault?{" "}
           <Link to={"/sign-up"} className="text-blue-400 hover:underline">
             Create Account
