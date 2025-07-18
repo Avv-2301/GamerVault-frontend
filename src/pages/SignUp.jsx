@@ -41,6 +41,7 @@ const SignUp = () => {
               type="text"
               placeholder="Choose your username"
               className="w-full pl-10 p-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-gray-300 font-semibold text-lg"
+              required
             />
           </div>
 
@@ -53,6 +54,7 @@ const SignUp = () => {
               type="email"
               placeholder="Enter your email"
               className="w-full pl-10 p-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-gray-300 font-semibold text-lg"
+              required
             />
           </div>
           <div className="relative">
@@ -64,6 +66,7 @@ const SignUp = () => {
               type={showPassword ? "text" : "password"}
               placeholder="Create password"
               className="w-full pl-10 p-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-gray-300 font-semibold text-lg"
+              required
             />
             <button
               type="button"
@@ -71,9 +74,9 @@ const SignUp = () => {
               className="absolute top-3 right-3 text-gray-400"
             >
               {showPassword ? (
-                <IoEye className="mt-2 text-gray-300" size={18} />
-              ) : (
                 <IoEyeOff className="mt-2 text-gray-300" size={18} />
+              ) : (
+                <IoEye className="mt-2 text-gray-300" size={18} />
               )}
             </button>
           </div>
@@ -87,6 +90,7 @@ const SignUp = () => {
               type="password"
               placeholder="Confirm Password"
               className="w-full pl-10 p-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-gray-300 font-semibold text-lg"
+              required
             />
           </div>
           <div className="relative">
@@ -103,13 +107,13 @@ const SignUp = () => {
             <input type="checkbox" className="accent-pink-500 h-10" />
             <span>
               I agree to the{" "}
-              <a href="#" className="text-blue-400">
+              <Link to="#" className="text-blue-400 underline">
                 Terms of Service
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a href="#" className="text-yellow-400">
+              <Link to="#" className="text-yellow-400 underline">
                 Privacy Policy
-              </a>
+              </Link>
             </span>
           </label>
           <button

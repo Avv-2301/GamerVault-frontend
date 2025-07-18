@@ -1,25 +1,52 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa"; 
+import { FaShoppingCart } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-  const token = true;
-  const user = true;
+  const token = false;
+  const user = false;
+
+  const navigations = [
+    { path: "/store", label: "Store" },
+    { path: "/community", label: "Community" },
+    { path: "/about", label: "About" },
+    { path: "/support", label: "Support" },
+  ];
 
   return (
     <header className="bg-[#0d1117] text-white px-8 py-6 flex justify-between items-center">
-      <Link to="/" className="text-4xl font-bold text-blue-500">
-        Gamer's <span className="text-4xl font-bold text-yellow-500">Vault</span>
+      <Link to="/" className="flex items-center gap-3">
+        <img
+          src="/images/logo.png"
+          alt="Gamer Vault Logo"
+          className="h-14 w-14 object-contain"
+        />
+        <span className="text-3xl font-bold">
+          <span className="text-blue-500">Gamer</span>
+          <span className="text-yellow-500">Vault</span>
+        </span>
       </Link>
 
-      <nav className="space-x-6 font-semibold text-xl">
-        <Link to="/store">Store</Link>
-        <Link to="/community">Community</Link>
-        <a href="/">About</a>
-        <a href="/">Support</a>
+      <nav className="space-x-6 font-semibold text-2xl">
+        {navigations.map((nav, index) => {
+          return (
+            <Link
+              key={index}
+              to={nav.path}
+              className={`${
+                currentPath === nav.path ? "text-yellow-500 underline" : "text-white"
+              }`}
+            >
+              {nav.label}
+            </Link>
+          );
+        })}
       </nav>
 
       <div className="flex items-center gap-4 relative">
