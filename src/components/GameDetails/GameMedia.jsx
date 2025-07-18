@@ -23,7 +23,7 @@ const GameMedia = () => {
         <h3 className="text-2xl font-bold mb-6 text-white text-4xl">Gameplay Trailer</h3>
         <div className="rounded-lg overflow-hidden mb-6">
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            src="https://youtu.be/8X2kIfS6fb8?si=gfgvcN4t6b6hIw66"
             width="100%"
             height="500px"
             controls={true}
