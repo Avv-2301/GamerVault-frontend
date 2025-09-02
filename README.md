@@ -18,19 +18,28 @@ Welcome to **Gamer Vault** – your ultimate gaming hub! Explore, buy, and enjoy
 Here’s a sneak peek of the app!  
 
 <!-- Add your images below by replacing the placeholders with actual image paths -->
-
+---
+## Home Page
 ![Home Page](public/images/Homepage.png)  
 *Home page showcasing latest games and community highlights.*
 
+
+## Game Detail
 ![Game Details](public/images/Game-detail.png)  
 *Game details page with “Add to Cart” option and coupon application.*
 
+
+## Community
 ![Community](public/images/Community.png)  
 *Join discussions, share tips, and connect with other gamers.*
 
+
+## Cart Page
 ![Cart](public/images/cart.png)  
 *Manage your cart and proceed to checkout easily.*
 
+
+## Store Page
 ![Store](public/images/Store.png)  
 *List of Various Games Can filter According to need.*
 
