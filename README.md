@@ -19,17 +19,20 @@ Here’s a sneak peek of the app!
 
 <!-- Add your images below by replacing the placeholders with actual image paths -->
 
-![Home Page](path/to/homepage.png)  
+![Home Page](public/images/Homepage.png)  
 *Home page showcasing latest games and community highlights.*
 
-![Game Details](path/to/game-details.png)  
+![Game Details](public/images/Game-detail.png)  
 *Game details page with “Add to Cart” option and coupon application.*
 
-![Community](path/to/community.png)  
+![Community](public/images/Community.png)  
 *Join discussions, share tips, and connect with other gamers.*
 
-![Cart](path/to/cart.png)  
+![Cart](public/images/cart.png)  
 *Manage your cart and proceed to checkout easily.*
+
+![Store](public/images/Store.png)  
+*List of Various Games Can filter According to need.*
 
 ---
 
