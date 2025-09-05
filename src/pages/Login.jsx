@@ -35,7 +35,7 @@ const Login = () => {
           <FaUser className="absolute top-1/2 left-3 transform -translate-y-1/2 text-blue-500" />
           <input
             type="text"
-            placeholder="Enter username or email"
+            placeholder="Enter email"
             className="w-full pl-10 p-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-gray-300 font-semibold text-lg"
           />
         </div>
